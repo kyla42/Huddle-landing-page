@@ -147,7 +147,7 @@
 // feature section
 .feature {
     width: 100%;
-    height: 176.4rem;
+    height: 174rem;
     margin-top: 16rem;
     display: flex;
     flex-direction: column;
@@ -375,6 +375,7 @@
                 margin-left: 1rem;
                 background-color: $veryDarkCyan;
                 color: white;
+                border-radius: 50%;
 
                 &:hover {
                     color: $pink;
