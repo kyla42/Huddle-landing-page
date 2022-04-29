@@ -97,6 +97,7 @@ button {
   border-radius: 4rem;
   -webkit-box-shadow: 0 0.5rem 1rem 0.2rem rgba(128, 141, 153, 0.2);
           box-shadow: 0 0.5rem 1rem 0.2rem rgba(128, 141, 153, 0.2);
+  cursor: pointer;
 }
 
 button:hover {
