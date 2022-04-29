@@ -16,7 +16,6 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 1.8rem;
   color: #00252e;
-  background-color: whitesmoke;
   z-index: -5;
 }
 
@@ -106,18 +105,29 @@ button:hover {
 
 .main {
   position: relative;
-  max-width: 144rem;
+  max-width: 100vw;
   margin: auto;
   background-color: white;
   overflow-x: hidden;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
   z-index: -2;
 }
 
-.hero {
+.sec_hero {
+  max-width: 100vw;
+  background-color: #ebfbff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.sec_hero .hero {
   position: relative;
-  width: 100%;
+  width: 144rem;
   height: 72rem;
   padding: 0 8rem;
   background-image: url(../images/bg-hero-desktop.svg);
@@ -132,7 +142,7 @@ button:hover {
       grid-template-areas: "bar bar" "info pic";
 }
 
-.hero::after {
+.sec_hero .hero::after {
   content: "";
   position: absolute;
   top: 0;
@@ -143,7 +153,7 @@ button:hover {
   z-index: -1;
 }
 
-.hero_bar {
+.sec_hero .hero_bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -159,12 +169,12 @@ button:hover {
   grid-area: bar;
 }
 
-.hero_bar > img {
+.sec_hero .hero_bar > img {
   width: 20rem;
   height: 35%;
 }
 
-.hero_bar > button {
+.sec_hero .hero_bar > button {
   width: 20rem;
   height: 4.8rem;
   color: inherit;
@@ -172,7 +182,7 @@ button:hover {
   background: white;
 }
 
-.hero_info {
+.sec_hero .hero_info {
   padding: 0rem 8rem 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -193,7 +203,7 @@ button:hover {
   grid-area: info;
 }
 
-.hero_info > button {
+.sec_hero .hero_info > button {
   width: 28rem;
   height: 5.6rem;
   color: white;
@@ -201,7 +211,7 @@ button:hover {
   background: #ff52bf;
 }
 
-.hero_pic {
+.sec_hero .hero_pic {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -213,16 +223,13 @@ button:hover {
   grid-area: pic;
 }
 
-.hero_pic > img {
+.sec_hero .hero_pic > img {
   width: 100%;
 }
 
 @media (max-width: 900px) {
-  .main {
-    max-width: 37.5rem;
-  }
-  .hero {
-    width: 100%;
+  .sec_hero .hero {
+    width: 37.5rem;
     height: 72rem;
     padding: 0;
     background-image: url(../images/bg-hero-mobile.svg);
@@ -232,23 +239,23 @@ button:hover {
         grid-template-rows: 8.8rem 1fr 1fr;
         grid-template-areas: "bar" "info" "pic";
   }
-  .hero_bar {
+  .sec_hero .hero_bar {
     height: 4.5rem;
     padding: 0 1.6rem;
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: bar;
   }
-  .hero_bar > img {
+  .sec_hero .hero_bar > img {
     width: 11rem;
     height: 38%;
   }
-  .hero_bar > button {
+  .sec_hero .hero_bar > button {
     width: 10rem;
     height: 2.4rem;
     font-size: 1.1rem;
   }
-  .hero_info {
+  .sec_hero .hero_info {
     padding: 2rem 3.8rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -258,12 +265,12 @@ button:hover {
     -ms-grid-column: 1;
     grid-area: info;
   }
-  .hero_info > button {
+  .sec_hero .hero_info > button {
     width: 24rem;
     height: 4rem;
     font-size: 1.2rem;
   }
-  .hero_pic {
+  .sec_hero .hero_pic {
     width: 80%;
     margin: auto;
     -ms-grid-row: 3;
@@ -272,8 +279,20 @@ button:hover {
   }
 }
 
-.feature {
-  width: 100%;
+.sec_feature {
+  max-width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.sec_feature .feature {
+  width: 144rem;
   height: 174.7rem;
   margin-top: 16rem;
   display: -webkit-box;
@@ -289,7 +308,7 @@ button:hover {
   row-gap: 4rem;
 }
 
-.feature .container {
+.sec_feature .feature .container {
   max-width: 85.4%;
   height: 44rem;
   padding-left: 9rem;
@@ -305,7 +324,7 @@ button:hover {
           flex-direction: row;
 }
 
-.feature .container_pic {
+.sec_feature .feature .container_pic {
   width: 50%;
   padding: 3rem;
   display: -webkit-box;
@@ -319,11 +338,11 @@ button:hover {
           align-items: center;
 }
 
-.feature .container_pic > img {
+.sec_feature .feature .container_pic > img {
   width: 80%;
 }
 
-.feature .container_des {
+.sec_feature .feature .container_des {
   width: 50%;
   padding: 3rem 3.5rem;
   display: -webkit-box;
@@ -342,24 +361,24 @@ button:hover {
   row-gap: 1.2rem;
 }
 
-.feature .container_des p {
+.sec_feature .feature .container_des p {
   color: #808d99;
 }
 
-.feature .container-rev {
+.sec_feature .feature .container-rev {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
 
-.feature .container-rev .container_pic {
+.sec_feature .feature .container-rev .container_pic {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
 }
 
-.feature .container-sm {
+.sec_feature .feature .container-sm {
   position: absolute;
   bottom: 46.5rem;
   width: 80rem;
@@ -385,7 +404,7 @@ button:hover {
   row-gap: 3.4rem;
 }
 
-.feature .container-sm > button {
+.sec_feature .feature .container-sm > button {
   width: 50%;
   height: 8rem;
   color: white;
@@ -395,12 +414,21 @@ button:hover {
 }
 
 @media (max-width: 900px) {
-  .feature {
-    width: 100%;
+  .sec_feature {
+    max-width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .sec_feature .feature {
+    width: 37.5rem;
     margin-top: 6rem;
     row-gap: 4rem;
   }
-  .feature .container {
+  .sec_feature .feature .container {
     max-width: 90%;
     height: auto;
     padding: 2rem 0;
@@ -409,16 +437,16 @@ button:hover {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .feature .container_pic {
+  .sec_feature .feature .container_pic {
     width: 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .feature .container_pic > img {
+  .sec_feature .feature .container_pic > img {
     width: 90%;
   }
-  .feature .container_des {
+  .sec_feature .feature .container_des {
     width: 100%;
     padding: 3rem 3.5rem;
     -webkit-box-align: center;
@@ -426,29 +454,29 @@ button:hover {
             align-items: center;
     text-align: center;
   }
-  .feature .container_des p {
+  .sec_feature .feature .container_des p {
     font-size: 1.4rem;
     line-height: 2.1rem;
   }
-  .feature .container-rev {
+  .sec_feature .feature .container-rev {
     -webkit-box-orient: inherit;
     -webkit-box-direction: inherit;
         -ms-flex-direction: inherit;
             flex-direction: inherit;
   }
-  .feature .container-rev .container_pic {
+  .sec_feature .feature .container-rev .container_pic {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .feature .container-sm {
+  .sec_feature .feature .container-sm {
     position: absolute;
     bottom: 78rem;
-    width: 94%;
+    max-width: 75%;
     height: 17rem;
     row-gap: 2rem;
   }
-  .feature .container-sm > button {
+  .sec_feature .feature .container-sm > button {
     width: 60%;
     height: 4rem;
     font-size: 1rem;
@@ -456,7 +484,20 @@ button:hover {
   }
 }
 
-.footer {
+.sec_footer {
+  max-width: 100vw;
+  background: #00252e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.sec_footer .footer {
   max-width: 144rem;
   height: 56rem;
   color: rgba(255, 255, 255, 0.8);
@@ -469,7 +510,7 @@ button:hover {
           align-items: center;
 }
 
-.footer .container {
+.sec_footer .footer .container {
   width: 87.5%;
   height: auto;
   margin: auto;
@@ -483,11 +524,11 @@ button:hover {
       grid-template-areas: "logo logo logo" "ctc links sns" "cr cr cr";
 }
 
-.footer .container_logo {
+.sec_footer .footer .container_logo {
   padding: 0 3rem;
 }
 
-.footer .container_contact {
+.sec_footer .footer .container_contact {
   padding: 3rem 8rem 3rem 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -502,7 +543,7 @@ button:hover {
   grid-area: ctc;
 }
 
-.footer .container_contact .item {
+.sec_footer .footer .container_contact .item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -514,18 +555,18 @@ button:hover {
           column-gap: 2rem;
 }
 
-.footer .container_contact .item .icon {
+.sec_footer .footer .container_contact .item .icon {
   width: 1.7rem;
   height: 1.7rem;
   margin-top: 0.5rem;
 }
 
-.footer .container_contact p {
+.sec_footer .footer .container_contact p {
   font-size: 1.6rem;
   line-height: 2.4rem;
 }
 
-.footer .container_links {
+.sec_footer .footer .container_links {
   padding: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -540,16 +581,16 @@ button:hover {
   grid-area: links;
 }
 
-.footer .container_links a {
+.sec_footer .footer .container_links a {
   font-weight: 400;
 }
 
-.footer .container_links a:hover {
+.sec_footer .footer .container_links a:hover {
   text-decoration: underline;
 }
 
-.footer .container_links .box-left,
-.footer .container_links .box-right {
+.sec_footer .footer .container_links .box-left,
+.sec_footer .footer .container_links .box-right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -563,7 +604,7 @@ button:hover {
   row-gap: 2rem;
 }
 
-.footer .container_social {
+.sec_footer .footer .container_social {
   padding: 3rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -576,7 +617,7 @@ button:hover {
   grid-area: sns;
 }
 
-.footer .container_social .btn {
+.sec_footer .footer .container_social .btn {
   -webkit-box-shadow: none;
           box-shadow: none;
   border: 0.1rem solid;
@@ -588,15 +629,15 @@ button:hover {
   border-radius: 50%;
 }
 
-.footer .container_social .btn:hover {
+.sec_footer .footer .container_social .btn:hover {
   color: #ff52bf;
 }
 
-.footer .container_social .btn .icon {
+.sec_footer .footer .container_social .btn .icon {
   color: white;
 }
 
-.footer .container_copyright {
+.sec_footer .footer .container_copyright {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -615,11 +656,11 @@ button:hover {
 }
 
 @media (max-width: 900px) {
-  .footer {
-    max-width: 100%;
+  .sec_footer .footer {
+    max-width: 37.5rem;
     height: 85rem;
   }
-  .footer .container {
+  .sec_footer .footer .container {
     width: 100%;
     height: auto;
     margin: auto;
@@ -630,28 +671,28 @@ button:hover {
         grid-template-rows: 3rem 4fr 5fr 5rem 3rem;
         grid-template-areas: "logo" "ctc" "links" "sns" "cr";
   }
-  .footer .container_logo {
+  .sec_footer .footer .container_logo {
     padding: 0 1.8rem;
   }
-  .footer .container_logo img {
+  .sec_footer .footer .container_logo img {
     width: 50%;
   }
-  .footer .container_contact {
+  .sec_footer .footer .container_contact {
     padding: 2rem 3rem 0 1.8rem;
     row-gap: 2rem;
   }
-  .footer .container_links {
+  .sec_footer .footer .container_links {
     padding: 1.8rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .footer .container_links .box-left,
-  .footer .container_links .box-right {
+  .sec_footer .footer .container_links .box-left,
+  .sec_footer .footer .container_links .box-right {
     padding-bottom: 2rem;
   }
-  .footer .container_social {
+  .sec_footer .footer .container_social {
     padding: 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -660,10 +701,10 @@ button:hover {
         -ms-flex-align: end;
             align-items: flex-end;
   }
-  .footer .container_social .btn {
+  .sec_footer .footer .container_social .btn {
     margin: 0.6rem;
   }
-  .footer .container_copyright {
+  .sec_footer .footer .container_copyright {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
