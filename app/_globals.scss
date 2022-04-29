@@ -14,6 +14,7 @@ body {
     font-family: $fontOpenSans;
     font-size: $font-md;
     color: $veryDarkCyan;
+    overflow-x: hidden;
     z-index: -5;
 }
 
