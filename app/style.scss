@@ -101,7 +101,7 @@
 
         .hero {
             width: 37.5rem;
-            height: 72rem;
+            height: 75rem;
             padding: 0;
             background-image: url(../images/bg-hero-mobile.svg);
             grid-template-columns: 1fr;
@@ -248,6 +248,7 @@
 
         .feature {
             width: 37.5rem;
+            height: 190rem;
             margin-top: 6rem;
             row-gap: 4rem;
 
@@ -289,7 +290,7 @@
 
             .container-sm {
                 position: absolute;
-                bottom: 78rem;
+                bottom: 90rem;
                 max-width: 75%;
                 height: 17rem;
                 row-gap: 2rem;
@@ -434,7 +435,7 @@
     .sec_footer {
         .footer {
             max-width: 37.5rem;
-            height: 85rem;
+            height: 95rem;
 
             .container {
                 width: 100%;

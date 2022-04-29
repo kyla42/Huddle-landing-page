@@ -1,6 +1,8 @@
 *,
 *::before,
 *::after {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -9,12 +11,13 @@ html {
 }
 
 body {
+    position: relative;
     margin: 0;
     padding: 0;
     font-family: $fontOpenSans;
     font-size: $font-md;
     color: $veryDarkCyan;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     z-index: -5;
 }
 

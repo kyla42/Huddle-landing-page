@@ -1,6 +1,8 @@
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -10,12 +12,12 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
   font-size: 1.8rem;
   color: #00252e;
-  overflow-x: hidden;
   z-index: -5;
 }
 
@@ -228,7 +230,7 @@ button:hover {
 @media (max-width: 900px) {
   .sec_hero .hero {
     width: 37.5rem;
-    height: 72rem;
+    height: 75rem;
     padding: 0;
     background-image: url(../images/bg-hero-mobile.svg);
     -ms-grid-columns: 1fr;
@@ -423,6 +425,7 @@ button:hover {
   }
   .sec_feature .feature {
     width: 37.5rem;
+    height: 190rem;
     margin-top: 6rem;
     row-gap: 4rem;
   }
@@ -469,7 +472,7 @@ button:hover {
   }
   .sec_feature .feature .container-sm {
     position: absolute;
-    bottom: 78rem;
+    bottom: 90rem;
     max-width: 75%;
     height: 17rem;
     row-gap: 2rem;
@@ -656,7 +659,7 @@ button:hover {
 @media (max-width: 900px) {
   .sec_footer .footer {
     max-width: 37.5rem;
-    height: 85rem;
+    height: 95rem;
   }
   .sec_footer .footer .container {
     width: 100%;
