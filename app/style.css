@@ -425,7 +425,6 @@ button:hover {
   }
   .sec_feature .feature {
     width: 37.5rem;
-    height: 190rem;
     margin-top: 6rem;
     row-gap: 4rem;
   }
@@ -472,7 +471,7 @@ button:hover {
   }
   .sec_feature .feature .container-sm {
     position: absolute;
-    bottom: 90rem;
+    bottom: 78rem;
     max-width: 75%;
     height: 17rem;
     row-gap: 2rem;
@@ -659,7 +658,7 @@ button:hover {
 @media (max-width: 900px) {
   .sec_footer .footer {
     max-width: 37.5rem;
-    height: 95rem;
+    height: 85rem;
   }
   .sec_footer .footer .container {
     width: 100%;
