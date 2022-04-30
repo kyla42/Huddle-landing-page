@@ -23,6 +23,7 @@
         width: 144rem;
         height: 72rem;
         padding: 0 8rem;
+        margin: auto;
         background-image: url(../images/bg-hero-desktop.svg);
         background-position: center;
         background-repeat: no-repeat;
@@ -212,8 +213,8 @@
         }
 
         .container-sm {
-            position: absolute;
-            bottom: 46.5rem;
+            // position: absolute;
+            // bottom: 46.5rem;
             width: 80rem;
             height: 28rem;
             padding-top: 1rem;
@@ -225,6 +226,7 @@
             align-items: center;
             justify-content: center;
             row-gap: 3.4rem;
+            transform: translateY(40%);
 
             >button {
                 width: 50%;
@@ -287,9 +289,9 @@
             }
 
             .container-sm {
-                position: absolute;
-                bottom: 78rem;
-                max-width: 75%;
+                // position: absolute;
+                // bottom: 78rem;
+                max-width: 95%;
                 height: 17rem;
                 row-gap: 2rem;
 
@@ -317,6 +319,7 @@
     .footer {
         max-width: 144rem;
         height: 56rem;
+        margin: auto;
         color: rgba(255, 255, 255, 0.8);
         background: $veryDarkCyan;
         display: flex;
