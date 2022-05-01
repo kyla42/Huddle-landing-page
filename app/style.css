@@ -60,6 +60,10 @@ h3 {
   }
 }
 
+h4 {
+  display: none;
+}
+
 p {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
