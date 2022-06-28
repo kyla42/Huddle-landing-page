@@ -365,7 +365,7 @@
                 justify-content: start;
                 column-gap: 12rem;
                 grid-area: links;
-
+                
                 a {
                     font-weight: 400;
                 }
@@ -398,6 +398,7 @@
                     background-color: $veryDarkCyan;
                     color: white;
                     border-radius: 50%;
+                    transition: color .3s ease-in-out;
 
                     &:hover {
                         color: $pink;
